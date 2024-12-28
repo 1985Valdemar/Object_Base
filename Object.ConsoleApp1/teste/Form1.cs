@@ -105,6 +105,42 @@ namespace teste
                 return;//finalizar metodo devido erro
             }
             //VERIFICAR CHECK
+            char segmento;
+
+            if (radioMetalurgica.Checked)
+            {
+                segmento = 'M';
+            }
+            else if (radioHospitalar.Checked)
+            {
+                segmento = 'H';
+            }
+            else 
+            {
+                segmento = 'A';
+            }
+
+            Empresa empresa = new Empresa();
+            empresa.Nome = txtNome.Text;
+            empresa.DataNascimento = txtData.Text;
+            empresa.Estado = comboEstado.SelectedItem.ToString();
+            empresa.Telefone = txtTelefone.Text;
+            empresa.Nacional = checkNacional.Checked;
+            empresa.Multinacional = checkMultinacional.Checked;
+            empresa.Segmento = segmento;
+
+            //VERIFICAÇAO NOVA EMPRESA OU EXIGENTE
+            //SE INDEX FOR MAIOR 0 ADICONAR NOVA EMPRESA
+            if (index < 0) 
+            {
+                listaEmpresa.Add(empresa);
+            }
+            else 
+            {
+                listaEmpresa[index] = empresa;
+            }
+
+            btnLimpar_Click(btnLimpar, EventArgs.Empty);
 
         }
 
