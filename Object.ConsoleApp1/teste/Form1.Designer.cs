@@ -125,6 +125,7 @@
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(528, 34);
             this.txtTelefone.TabIndex = 7;
+            this.txtTelefone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtTelefone_MaskInputRejected);
             // 
             // checkMultinacional
             // 

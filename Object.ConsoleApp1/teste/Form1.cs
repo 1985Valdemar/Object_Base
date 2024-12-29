@@ -73,7 +73,16 @@ namespace teste
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            txtNome.Text = "";
+            txtData.Text = "";
+            comboEstado.SelectedIndex = 0;
+            txtTelefone.Text = "";
+            checkMultinacional.Checked = false;
+            checkNacional.Checked = false;
+            radioHospitalar.Checked = false;
+            radioMetalurgica.Checked = true;
+            radioMontadora.Checked = false;
+            txtNome.Focus();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -98,7 +107,7 @@ namespace teste
             }
 
             //CONDIÇÃO PARA VERIFICAR CAMPO OBRIGATORIO
-            if (txtTelefone.Text == "")
+            if (txtTelefone.Text == "(  )       - ")
             {
                 MessageBox.Show("Preencha o Campo Telefone.");
                 txtTelefone.Focus();//VAI FICAR EM FOCO CHAMANDO ATENÇÃO
@@ -140,13 +149,17 @@ namespace teste
                 listaEmpresa[index] = empresa;
             }
 
-            btnLimpar_Click(btnLimpar, EventArgs.Empty);
+            button1_Click_1(btnLimpar, EventArgs.Empty);
+
+            Listar();
 
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-
+            int indice = lista.SelectedIndex;
+            listaEmpresa.RemoveAt(indice);
+            Listar();
         }
 
         private void Listar() 
@@ -157,6 +170,11 @@ namespace teste
             {
                 lista.Items.Add(e.Nome);
             }
+        }
+
+        private void txtTelefone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }
