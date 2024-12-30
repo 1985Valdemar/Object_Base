@@ -176,5 +176,32 @@ namespace teste
         {
 
         }
+
+        private void lista_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int indice = lista.SelectedIndex;
+            Empresa empresa = listaEmpresa[indice];
+
+            txtNome.Text = empresa.Nome;
+            txtData.Text = empresa.DataNascimento;
+            comboEstado.SelectedItem = empresa.Estado;
+            txtTelefone.Text = empresa.Telefone;
+            checkMultinacional.Checked = empresa.Multinacional;
+            checkNacional.Checked = empresa.Nacional;
+
+            switch (empresa.Segmento) 
+            {
+                case 'M':
+                    radioMetalurgica.Checked = true;
+                    break;
+                case 'H':
+                    radioHospitalar.Checked = false;
+                    break;
+                default:
+                    radioMontadora.Checked = false;
+                    break;
+            }
+
+        }
     }
 }

@@ -95,7 +95,7 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(214, 13);
+            this.txtNome.Location = new System.Drawing.Point(231, 12);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(528, 34);
             this.txtNome.TabIndex = 4;
@@ -103,7 +103,7 @@
             // txtData
             // 
             this.txtData.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtData.Location = new System.Drawing.Point(214, 56);
+            this.txtData.Location = new System.Drawing.Point(231, 55);
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(528, 34);
             this.txtData.TabIndex = 5;
@@ -112,7 +112,7 @@
             // 
             this.comboEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboEstado.FormattingEnabled = true;
-            this.comboEstado.Location = new System.Drawing.Point(214, 96);
+            this.comboEstado.Location = new System.Drawing.Point(231, 95);
             this.comboEstado.Name = "comboEstado";
             this.comboEstado.Size = new System.Drawing.Size(528, 37);
             this.comboEstado.TabIndex = 6;
@@ -120,7 +120,7 @@
             // txtTelefone
             // 
             this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(214, 142);
+            this.txtTelefone.Location = new System.Drawing.Point(231, 141);
             this.txtTelefone.Mask = "(00) 00000 - 0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(528, 34);
@@ -130,7 +130,7 @@
             // checkMultinacional
             // 
             this.checkMultinacional.AutoSize = true;
-            this.checkMultinacional.Location = new System.Drawing.Point(214, 198);
+            this.checkMultinacional.Location = new System.Drawing.Point(231, 197);
             this.checkMultinacional.Name = "checkMultinacional";
             this.checkMultinacional.Size = new System.Drawing.Size(107, 20);
             this.checkMultinacional.TabIndex = 8;
@@ -140,7 +140,7 @@
             // checkNacional
             // 
             this.checkNacional.AutoSize = true;
-            this.checkNacional.Location = new System.Drawing.Point(327, 198);
+            this.checkNacional.Location = new System.Drawing.Point(344, 197);
             this.checkNacional.Name = "checkNacional";
             this.checkNacional.Size = new System.Drawing.Size(83, 20);
             this.checkNacional.TabIndex = 9;
@@ -152,7 +152,7 @@
             this.groupBox1.Controls.Add(this.radioHospitalar);
             this.groupBox1.Controls.Add(this.radioMontadora);
             this.groupBox1.Controls.Add(this.radioMetalurgica);
-            this.groupBox1.Location = new System.Drawing.Point(214, 224);
+            this.groupBox1.Location = new System.Drawing.Point(231, 223);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(528, 76);
             this.groupBox1.TabIndex = 10;
@@ -200,6 +200,7 @@
             this.lista.Name = "lista";
             this.lista.Size = new System.Drawing.Size(716, 91);
             this.lista.TabIndex = 11;
+            this.lista.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lista_MouseDoubleClick);
             // 
             // btnCadastrar
             // 
